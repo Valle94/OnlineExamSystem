@@ -4,6 +4,7 @@ require "header.php";
 
 
 <html>
+
 <?php if (isset($_SESSION["email"]) && isset($_SESSION["logged_in"])) { ?>
     <p>You are logged in as <?= $_SESSION['email']?>.</p>
     <p>You may now take the exam.</p>
