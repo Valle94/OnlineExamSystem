@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $statement = $pdo->query(ReturnStudent($user['email']));
     $account = $statement->fetch();
 
-    var_dump($account);
+    //var_dump($account);
 
     // 1. Validate Email Format
     if (empty($user['email']) || !filter_var($user['email'], FILTER_VALIDATE_EMAIL)) {
@@ -44,6 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (!$invalid) {
         $_SESSION["email"] = $user['email'];
+        $_SESSION["studentID"] = $user['studentID'];
         $_SESSION["logged_in"] = true;
         $message = "Login Successful!";
     } else {
