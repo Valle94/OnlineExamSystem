@@ -2,7 +2,7 @@
 
 require "header.php";
 
-$studentID = $_SESSION['studentID'];
+$studentID = 1;
 
 $answerKey = 
 [
@@ -95,7 +95,7 @@ $sql = "INSERT INTO Results (studentID, Date, Time, Score, CorrectAnswers, Wrong
 			'$score', 
 			'$correctCount', 
 			'$wrongCount')";
-
+$submitStudentExam = $pdo->SubmitExam($studentID, $date, $time, $score, $correctCount, $wrongCount);
 ?>
 
 <!DOCTYPE html>
@@ -107,9 +107,9 @@ $sql = "INSERT INTO Results (studentID, Date, Time, Score, CorrectAnswers, Wrong
 
 <body>
 
-	<p><strong>Score: </strong><?php echo $score;?>%</p><br>
-	<p><strong>Correct Answers: </strong><?php echo $correctCount; ?> </p><br>
-	<p><strong>Wrong Answers: </strong><?php echo wrongCount; ?> </p><br>
+	<p><strong>Score: </strong><?php echo $score;?>%</p>
+	<p><strong>Correct Answers: </strong><?php echo $correctCount; ?> </p>
+	<p><strong>Wrong Answers: </strong><?php echo $wrongCount; ?> </p>
 
 	<h2> Question Review </h2>
 
