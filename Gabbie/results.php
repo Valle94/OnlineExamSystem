@@ -87,9 +87,9 @@ $date = date("m-d-Y");
 $time = date("H:i:s");
 
 // Saving the Results of the test into the Results Table in SQL
-$sql = "INSERT INTO Results (student_ID, Date, Time, Score, CorrectAnswers, WrongAnswers)
+$sql = "INSERT INTO Results (studentID, Date, Time, Score, CorrectAnswers, WrongAnswers)
 		VALUES (
-			'$student_ID', 
+			'$studentID', 
 			'$date', 
 			'$time', 
 			'$score', 
