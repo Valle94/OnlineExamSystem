@@ -1,6 +1,6 @@
 /* ========== Page Base ========== */
 body {
-  background-color: #f9e79f;                 /* page background */
+  background-color: #5499C7;                 /* page background */
   font-family: Arial, Helvetica, sans-serif;  /* sans-serif body text */
   color: #222;                               /* text color #1 */
   margin: 0;
@@ -65,27 +65,27 @@ th, td
 
 thead, th 
 {
-  background-color: #aed6f1; /* header background */
+  background-color: #AED6F1; /* header background */
   color: #111;
 }
 
 /* alternating row colors */
 tbody tr:nth-child(even) 
 {
-  background-color: #f2f2f2;
+  background-color: #FCF3CF;
 }
 
 /* ======= Styling forms ========*/
 
 form 
 {
-  width: 400px;
+  width: 800px;
   margin: 50px auto;
   padding: 25px;
-  background-color: white;
+  background-color: #FCF3CF;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  text-align: center;
+  text-align: left;
 }
 
 label 
@@ -99,7 +99,7 @@ input[type="submit"]
 {
   width: 100%;
   padding: 10px;
-  background-color: #4caf50;
+  background-color: #ABB2B9;
   color: whitesmoke;
   border: none;
   border-radius: 5px;

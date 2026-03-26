@@ -119,7 +119,7 @@ $sql = "INSERT INTO Results (student_ID, Date, Time, Score, CorrectAnswers, Wron
 			<?php
 
 			// implode turns an array into a string
-			// htmlsecialchars() protects the page from breaking if an asnwer includes
+			// htmlsecialchars() protects the page from breaking if an answer includes
 			// a special character such as $ % & etc
 			if(is_array($studentAnswers[$key]))
 			{

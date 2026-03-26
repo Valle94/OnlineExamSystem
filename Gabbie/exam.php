@@ -20,9 +20,9 @@ session_start();
 		<h3> 1. Consider the following associative array:<br><br>
 
 		$students = [ <br>
-			['name' => 'Max', 'email' => 'max@email.com', <br>'major' => 'Game Programming'],<br>
-			['name' => 'Gabbie', 'email' => <br>'gabbie@email.com', 'major' => 'Cyber Security'], <br>
-			['name' => 'Dan', 'email' => 'dan@email.com', 'major' => <br>'Information Technology']<br>
+			['name' => 'Max', 'email' => 'max@email.com', 'major' => 'Game Programming'],<br>
+			['name' => 'Gabbie', 'email' => 'gabbie@email.com','major' => 'Cyber Security'], <br>
+			['name' => 'Dan', 'email' => 'dan@email.com', 'major' => 'Information Technology']<br>
 			]<br> <br>
 
 			What will the following line of code output?<br>
