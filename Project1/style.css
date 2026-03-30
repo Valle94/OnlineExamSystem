@@ -1,0 +1,149 @@
+/* ========== Page Base ========== */
+body, head {
+  background-color: #5499C7;                 /* page background */
+  font-family: Arial, Helvetica, sans-serif;  /* sans-serif body text */
+  color: #222;                               /* text color #1 */
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+/* ========== Headings & Text ========== */
+h1 
+{
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  background-color: #f8c471;
+  text-align: center;                        /* centered element */
+  color: #1f4e79;                            /* text color #2 */
+  margin-bottom: 10px;
+}
+
+h2 
+{
+  font-family: "Courier New", Courier, monospace;
+  color: #333;
+  margin-top: 25px;
+}
+
+p 
+{
+  line-height: 1.5;
+}
+
+/* ========== Image ========== */
+.image 
+{
+  width: 320px;      /* makes image smaller */
+  height: auto;      /* keeps aspect ratio */
+  display: block;
+  margin: 15px auto; /* centers image */
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+
+/* ========== Lists ========== */
+ul, ol 
+{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding-left: 25px;
+}
+
+/* ========== Table ========== */
+table 
+{
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td 
+{
+  border: 1px solid #333;   /* borders */
+  padding: 10px;            /* spacing */
+  text-align: center;
+}
+
+thead, th 
+{
+  background-color: #AED6F1; /* header background */
+  color: #111;
+}
+
+/* alternating row colors */
+tbody tr:nth-child(even) 
+{
+  background-color: #FCF3CF;
+}
+
+/* ======= Styling forms ========*/
+
+form 
+{
+  width: 800px;
+  margin: 50px auto;
+  padding: 25px;
+  background-color: #FCF3CF;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+label 
+{
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bolder;
+}
+
+input[type="reset"]
+{
+  width: 100%;
+  padding: 10px;
+  background-color: #f0b7b7;
+  color: #222;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+input[type="submit"]
+{
+  width: 100%;
+  padding: 10px;
+  background-color: #99f3b4;
+  color: #222;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.error
+{
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}
+
+.success
+{
+  color: green;
+  text-align: center;
+}
+
+
+/*===== Image Styling =====*/
+.top-image,
+.bottom-image
+{
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  display: block;
+}
+
+img {
+  width: 100%;
+}
