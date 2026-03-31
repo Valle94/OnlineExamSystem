@@ -20,7 +20,7 @@ require "header.php";
 <!DOCTYPE html>
 <html>
 
-<body>
+<body style="background-color: #5499C7;">
 	<!-- If the user can take the exam show the exam form -->
 	<?php if ($canExam) { ?>
 		<h1> CITA 355 Online Exam </h1>
