@@ -7,7 +7,7 @@ $results = $pdo->query(TestTakenToday($_SESSION['studentID']));
 $testTaken = $results->fetch();
 // If the current date equals the date in the returned row,
 // the user will not be allowed to take the exam. 
-if (date('Y-m-d') == $testTaken['Date']) {
+if (isset($testTaken['Date']) && date('Y-m-d') == $testTaken['Date']) {
 	$canExam = false;
 } else {
 	$canExam = true;
