@@ -1,4 +1,128 @@
 <?php
+//require "requires.php";
+
+//$user = [
+//    'firstname' => '',
+//    'lastname' => '',
+ //   'email' => '',
+//    'password' => '',
+//    'pwconfirm' => '',
+//];
+
+//$errors = [
+//    'firstname' => '',
+//    'lastname' => '',
+//    'email' => '',
+//    'password' => '',
+//    'pwconfirm' => '',
+//];
+
+//$message = '';
+//$invalid = true;
+
+//if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Collecting form data
+//    $user['firstname'] = trim($_POST['firstname'] ?? '');
+//    $user['lastname'] = trim($_POST['lastname'] ?? '');
+//    $user['email'] = trim($_POST['email'] ?? '');
+ //   $user['password'] = $_POST['password'] ?? '';
+ //   $user['pwconfirm'] = $_POST['pwconfirm'] ?? '';
+
+    // Validation for first and last name
+//    if (empty($user['firstname'])) {
+//        $errors['firstname'] =  "Please enter your first name.";
+//    } elseif (strlen($user['firstname']) > 30) {
+//        $errors['firstname'] = "First name exceeds 30 character limit.";
+ //   } else {
+ //       $errors['firstname'] = '';
+//    }
+
+ //   if (empty($user['lastname'])) {
+ //       $errors['lastname'] =  "Please enter your last name.";
+//    } elseif (strlen($user['lastname']) > 30) {
+ //       $errors['lastname'] = "Last name exceeds 30 character limit.";
+   // } else {
+     //   $errors['lastname'] = '';
+ //   }
+
+   // $errors['email'] = ( // Email exists and is a valid email (contains @ and a . address)
+    //    empty($user['email']) ||
+      //  !filter_var($user['email'], FILTER_VALIDATE_EMAIL)) ? "Please enter a valid email address." : '';
+
+//    $errors['password'] = ( // Password exists, is greater than 8 characters, contains an upper
+  //      empty($user['password']) || // case letter and a number. 
+    //    strlen($user['password']) < 8 ||
+      //  !preg_match('/[A-Z]/', $user['password']) ||
+      //  !preg_match('/[0-9]/', $user['password'])
+//    ) ? "Password must be at least 8 characters, include one uppercase letter and one number." : '';
+  //  $errors['pwconfirm'] = ( // Retype password exists and is the same as first password
+//        empty($user['pwconfirm']) ||
+  //      $user['password'] !== $user['pwconfirm']) ? "Please re-enter your password." : '';
+
+//    $invalid = implode($errors);
+//}
+
+//if (!$invalid) {
+  //  try { // Try account creation
+    //    $insert = $pdo->query(AddStudent(
+      //      $user['firstname'],
+       //     $user['lastname'],
+      //      $user['email'],
+      //      password_hash($user['password'], PASSWORD_DEFAULT)
+      //  ));
+    
+        // Adjust top message
+//        $message = "Account Creation Successful! You may now log in.";
+//    }
+//    catch (Exception $e) { // This exception will be thrown if the entered
+  //      $invalid = true;   // email is already in the system. 
+    //    $message = "A user with that email already exists.";
+//    }
+//} elseif ($invalid && $_SERVER["REQUEST_METHOD"] == "POST") {
+//    $message = "Please correct the following errors:";
+//} else {
+//    $message = '';
+//}
+
+//include "header.php";
+?>
+
+<!--
+<html>
+
+<body>
+    <h2>Account Registration</h2>
+    <h3>
+        <?php // Message at the top of the form
+        if (!$invalid) {
+            echo "<p style='color: green'>$message</p>";
+        } else {
+            echo "<p style='color: red';>$message</p>";
+        } ?>
+    </h3> -->
+    <!-- Account creation form. The spans are for in-form
+     error messages that show per field.  -->
+<!--    <form action="create_account.php" method="POST">
+        <span style="color: red" ;><?//= $errors['firstname'] ?></span>
+        <p>First Name: <input type="text" name="firstname" value="<?//= $user['firstname'] ?>"></p>
+        <span style="color: red" ;><?//= $errors['lastname'] ?></span>
+        <p>Last Name: <input type="text" name="lastname" value=<?//= $user['lastname'] ?>></p>
+        <span style="color: red" ;><?//= $errors['email'] ?></span>
+        <p>Email Address: <input type="text" name="email" value=<?//= $user['email'] ?>></p>
+        <span style="color: red" ;><?//= $errors['password'] ?></span>
+        <p>Password: <input type="password" name="password"></p>
+        <span style="color: red" ;><?//= $errors['pwconfirm'] ?></span>
+        <p>Re-type Password: <input type="password" name="pwconfirm"></p>
+        <p><input type="reset" value="Clear Form"></p>
+        <p><input type="submit" name="Submit" value="Submit Form"></p>
+    </form>
+</body>
+
+</html> -->
+
+<!-- AI IMPLEMENTATION -->
+
+<?php
 require "requires.php";
 
 $user = [
@@ -21,100 +145,107 @@ $message = '';
 $invalid = true;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Collecting form data
     $user['firstname'] = trim($_POST['firstname'] ?? '');
     $user['lastname'] = trim($_POST['lastname'] ?? '');
     $user['email'] = trim($_POST['email'] ?? '');
     $user['password'] = $_POST['password'] ?? '';
     $user['pwconfirm'] = $_POST['pwconfirm'] ?? '';
 
-    // Validation for first and last name
     if (empty($user['firstname'])) {
-        $errors['firstname'] =  "Please enter your first name.";
+        $errors['firstname'] = "Please enter your first name.";
     } elseif (strlen($user['firstname']) > 30) {
         $errors['firstname'] = "First name exceeds 30 character limit.";
-    } else {
-        $errors['firstname'] = '';
     }
 
     if (empty($user['lastname'])) {
-        $errors['lastname'] =  "Please enter your last name.";
+        $errors['lastname'] = "Please enter your last name.";
     } elseif (strlen($user['lastname']) > 30) {
         $errors['lastname'] = "Last name exceeds 30 character limit.";
-    } else {
-        $errors['lastname'] = '';
     }
 
-    $errors['email'] = ( // Email exists and is a valid email (contains @ and a . address)
+    $errors['email'] = (
         empty($user['email']) ||
-        !filter_var($user['email'], FILTER_VALIDATE_EMAIL)) ? "Please enter a valid email address." : '';
+        !filter_var($user['email'], FILTER_VALIDATE_EMAIL)
+    ) ? "Please enter a valid email address." : '';
 
-    $errors['password'] = ( // Password exists, is greater than 8 characters, contains an upper
-        empty($user['password']) || // case letter and a number. 
+    $errors['password'] = (
+        empty($user['password']) ||
         strlen($user['password']) < 8 ||
         !preg_match('/[A-Z]/', $user['password']) ||
         !preg_match('/[0-9]/', $user['password'])
     ) ? "Password must be at least 8 characters, include one uppercase letter and one number." : '';
-    $errors['pwconfirm'] = ( // Retype password exists and is the same as first password
+
+    $errors['pwconfirm'] = (
         empty($user['pwconfirm']) ||
-        $user['password'] !== $user['pwconfirm']) ? "Please re-enter your password." : '';
+        $user['password'] !== $user['pwconfirm']
+    ) ? "Please re-enter your password." : '';
 
     $invalid = implode($errors);
 }
 
 if (!$invalid) {
-    try { // Try account creation
+    try {
         $insert = $pdo->query(AddStudent(
             $user['firstname'],
             $user['lastname'],
             $user['email'],
             password_hash($user['password'], PASSWORD_DEFAULT)
         ));
-    
-        // Adjust top message
-        $message = "Account Creation Successful! You may now log in.";
-    }
-    catch (Exception $e) { // This exception will be thrown if the entered
-        $invalid = true;   // email is already in the system. 
+
+        $message = "Account creation successful! You may now log in.";
+    } catch (Exception $e) {
+        $invalid = true;
         $message = "A user with that email already exists.";
     }
 } elseif ($invalid && $_SERVER["REQUEST_METHOD"] == "POST") {
     $message = "Please correct the following errors:";
-} else {
-    $message = '';
 }
-
-include "header.php";
 ?>
-
+<!DOCTYPE html>
 <html>
-
+<head>
+    <title>Create Account</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
+    <?php require "header.php"; ?>
+
     <h2>Account Registration</h2>
-    <h3>
-        <?php // Message at the top of the form
-        if (!$invalid) {
-            echo "<p style='color: green'>$message</p>";
-        } else {
-            echo "<p style='color: red';>$message</p>";
-        } ?>
-    </h3>
-    <!-- Account creation form. The spans are for in-form
-     error messages that show per field.  -->
+
+    <?php if ($message !== '') { ?>
+        <p class="<?php echo !$invalid ? 'success' : 'error'; ?>">
+            <?php echo $message; ?>
+        </p>
+    <?php } ?>
+
     <form action="create_account.php" method="POST">
-        <span style="color: red" ;><?= $errors['firstname'] ?></span>
-        <p>First Name: <input type="text" name="firstname" value="<?= $user['firstname'] ?>"></p>
-        <span style="color: red" ;><?= $errors['lastname'] ?></span>
-        <p>Last Name: <input type="text" name="lastname" value=<?= $user['lastname'] ?>></p>
-        <span style="color: red" ;><?= $errors['email'] ?></span>
-        <p>Email Address: <input type="text" name="email" value=<?= $user['email'] ?>></p>
-        <span style="color: red" ;><?= $errors['password'] ?></span>
-        <p>Password: <input type="password" name="password"></p>
-        <span style="color: red" ;><?= $errors['pwconfirm'] ?></span>
-        <p>Re-type Password: <input type="password" name="pwconfirm"></p>
+        <span style="color: red"><?php echo $errors['firstname']; ?></span>
+        <p>First Name:
+            <input type="text" name="firstname" value="<?php echo htmlspecialchars($user['firstname']); ?>">
+        </p>
+
+        <span style="color: red"><?php echo $errors['lastname']; ?></span>
+        <p>Last Name:
+            <input type="text" name="lastname" value="<?php echo htmlspecialchars($user['lastname']); ?>">
+        </p>
+
+        <span style="color: red"><?php echo $errors['email']; ?></span>
+        <p>Email Address:
+            <input type="text" name="email" value="<?php echo htmlspecialchars($user['email']); ?>">
+        </p>
+
+        <span style="color: red"><?php echo $errors['password']; ?></span>
+        <p>Password:
+            <input type="password" name="password">
+        </p>
+
+        <span style="color: red"><?php echo $errors['pwconfirm']; ?></span>
+        <p>Re-type Password:
+            <input type="password" name="pwconfirm">
+        </p>
+
         <p><input type="reset" value="Clear Form"></p>
         <p><input type="submit" name="Submit" value="Submit Form"></p>
     </form>
 </body>
-
 </html>
