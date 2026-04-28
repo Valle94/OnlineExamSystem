@@ -28995,9 +28995,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\xampp\\htdocs\\CITA-355-Project-1\\355FinalProject\\355FinalProject.csproj",
-      "projectName": "355FinalProject",
-      "projectPath": "C:\\xampp\\htdocs\\CITA-355-Project-1\\355FinalProject\\355FinalProject.csproj",
+      "projectUniqueName": "C:\\xampp\\htdocs\\CITA-355-Project-1\\355FinalProject\\FinalProject.csproj",
+      "projectName": "FinalProject",
+      "projectPath": "C:\\xampp\\htdocs\\CITA-355-Project-1\\355FinalProject\\FinalProject.csproj",
       "packagesPath": "C:\\Users\\Max\\.nuget\\packages\\",
       "outputPath": "C:\\xampp\\htdocs\\CITA-355-Project-1\\355FinalProject\\obj\\",
       "projectStyle": "PackageReference",

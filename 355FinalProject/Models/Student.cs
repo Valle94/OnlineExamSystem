@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace _355FinalProject.Models
+﻿namespace _355FinalProject.Models
 {
     internal class Student
     {

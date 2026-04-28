@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hOcH5ERiGnw=",
+  "dgSpecHash": "L+W5aH2vtpM=",
   "success": true,
-  "projectFilePath": "C:\\xampp\\htdocs\\CITA-355-Project-1\\355FinalProject\\355FinalProject.csproj",
+  "projectFilePath": "C:\\xampp\\htdocs\\CITA-355-Project-1\\355FinalProject\\FinalProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Max\\.nuget\\packages\\googlegson\\2.13.1.1\\googlegson.2.13.1.1.nupkg.sha512",
     "C:\\Users\\Max\\.nuget\\packages\\microsoft.extensions.configuration\\10.0.0\\microsoft.extensions.configuration.10.0.0.nupkg.sha512",
