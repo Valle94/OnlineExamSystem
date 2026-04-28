@@ -5,8 +5,86 @@
              Title="ExamPage">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            Text="Question 1: " />
+        <Label
+            Text="Consider The Following Associative Array:" />
+        <Image
+            Source="question1.png"
+            MaximumWidthRequest="100"
+            MaximumHeightRequest="200" />
+
+
+        <RadioButton Content="Max" GroupName="Q1"/>
+        <RadioButton Content="'name' => 'Max'" GroupName="Q1"/>
+        <RadioButton Content="Gabbie" GroupName="Q1"/>
+        <RadioButton Content="'name' => 'Gabbie'" GroupName="Q1"/>
+        <RadioButton Content="Dan" GroupName="Q1"/>
+        <RadioButton Content="'name' => 'Dan'" GroupName="Q1"/>
+
+
+
+        <Label 
+            Text="Question 2: " />
+        <Label
+            Text="Consider The Following Code:" />
+        <Image
+            Source="question2.png"
+            MaximumWidthRequest="100"
+            MaximumHeightRequest="200" />
+
+        <Label
+            Text="What is the Value of $equals?" />
+        <RadioButton Content="10" GroupName="Q2"/>
+        <RadioButton Content="True" GroupName="Q2"/>
+        <RadioButton Content="False" GroupName="Q2"/>
+        <RadioButton Content="15" GroupName="Q2"/>
+
+        
+        
+        <Label 
+            Text="Question 3: " />
+        <Label
+            Text="Select all Vaild PHP Variables:" />
+
+        <HorizontalStackLayout>
+            <CheckBox x:Name="chk1" />
+            <Label Text="number = 5" VerticalOptions="Center" />
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+            <CheckBox x:Name="chk2" />
+            <Label Text="$number = 5" VerticalOptions="Center" />
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+            <CheckBox x:Name="chk3" />
+            <Label Text="$5number = 5" VerticalOptions="Center" />
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+            <CheckBox x:Name="chk4" />
+            <Label Text="$_number = 5" VerticalOptions="Center" />
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+            <CheckBox x:Name="chk5" />
+            <Label Text="$number-5 = 5" VerticalOptions="Center" />
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+            <CheckBox x:Name="chk6" />
+            <Label Text="$number_5 = 5" VerticalOptions="Center" />
+        </HorizontalStackLayout>
+
+
+
+        <Label
+            Text="Question 4: " />
+
+        <Label
+            Text="Select all Valid Ways of Embedding a PHP tag Into HTML: " />
+        
+        
+
     </VerticalStackLayout>
 </ContentPage>
