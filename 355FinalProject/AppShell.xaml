@@ -3,12 +3,12 @@
     x:Class="_355FinalProject.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:_355FinalProject"
+    xmlns:pages="clr-namespace:_355FinalProject.Pages"
     Title="_355FinalProject">
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Title="Login Page"
+        ContentTemplate="{DataTemplate pages:LoginPage}"
+        Route="LoginPage" />
 
 </Shell>

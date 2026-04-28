@@ -1,0 +1,12 @@
+C:\xampp\htdocs\CITA-355-Project-1\355FinalProject\obj\Debug\net10.0-windows10.0.19041.0\win-x64\355FinalProject.csproj.AssemblyReference.cache
+C:\xampp\htdocs\CITA-355-Project-1\355FinalProject\obj\Debug\net10.0-windows10.0.19041.0\win-x64\mauiimage.inputs
+C:\xampp\htdocs\CITA-355-Project-1\355FinalProject\obj\Debug\net10.0-windows10.0.19041.0\win-x64\mauifont.inputs
+C:\xampp\htdocs\CITA-355-Project-1\355FinalProject\obj\Debug\net10.0-windows10.0.19041.0\win-x64\mauisplash.inputs
+C:\xampp\htdocs\CITA-355-Project-1\355FinalProject\obj\Debug\net10.0-windows10.0.19041.0\win-x64\mauimanifest.stamp
+C:\xampp\htdocs\CITA-355-Project-1\355FinalProject\obj\Debug\net10.0-windows10.0.19041.0\win-x64\Platforms\Windows\App.g.i.cs
+C:\xampp\htdocs\CITA-355-Project-1\355FinalProject\obj\Debug\net10.0-windows10.0.19041.0\win-x64\Platforms\Windows\App.g.cs
+C:\xampp\htdocs\CITA-355-Project-1\355FinalProject\obj\Debug\net10.0-windows10.0.19041.0\win-x64\XamlTypeInfo.g.cs
+C:\xampp\htdocs\CITA-355-Project-1\355FinalProject\obj\Debug\net10.0-windows10.0.19041.0\win-x64\Platforms\Windows\App.xaml
+C:\xampp\htdocs\CITA-355-Project-1\355FinalProject\obj\Debug\net10.0-windows10.0.19041.0\win-x64\Platforms\Windows\App.xbf
+C:\xampp\htdocs\CITA-355-Project-1\355FinalProject\obj\Debug\net10.0-windows10.0.19041.0\win-x64\XamlSaveStateFile.xml
+C:\xampp\htdocs\CITA-355-Project-1\355FinalProject\obj\Debug\net10.0-windows10.0.19041.0\win-x64\355FinalProject.GeneratedMSBuildEditorConfig.editorconfig
