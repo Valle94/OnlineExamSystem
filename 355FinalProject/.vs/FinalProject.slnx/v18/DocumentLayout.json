@@ -7,12 +7,16 @@
       "RelativeMoniker": "D:0:0:{F527D74A-F35C-1C6D-4C76-CBAA4E2BEECC}|FinalProject.csproj|solutionrelative:pages\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F527D74A-F35C-1C6D-4C76-CBAA4E2BEECC}|FinalProject.csproj|c:\\xampp\\htdocs\\cita-355-project-1\\355finalproject\\pages\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F527D74A-F35C-1C6D-4C76-CBAA4E2BEECC}|FinalProject.csproj|solutionrelative:pages\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F527D74A-F35C-1C6D-4C76-CBAA4E2BEECC}|FinalProject.csproj|c:\\xampp\\htdocs\\cita-355-project-1\\355finalproject\\pages\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F527D74A-F35C-1C6D-4C76-CBAA4E2BEECC}|FinalProject.csproj|solutionrelative:pages\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F527D74A-F35C-1C6D-4C76-CBAA4E2BEECC}|FinalProject.csproj|c:\\xampp\\htdocs\\cita-355-project-1\\355finalproject\\pages\\homepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F527D74A-F35C-1C6D-4C76-CBAA4E2BEECC}|FinalProject.csproj|solutionrelative:pages\\homepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F527D74A-F35C-1C6D-4C76-CBAA4E2BEECC}|FinalProject.csproj|c:\\xampp\\htdocs\\cita-355-project-1\\355finalproject\\pages\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F527D74A-F35C-1C6D-4C76-CBAA4E2BEECC}|FinalProject.csproj|solutionrelative:pages\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F527D74A-F35C-1C6D-4C76-CBAA4E2BEECC}|FinalProject.csproj|c:\\xampp\\htdocs\\cita-355-project-1\\355finalproject\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -26,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,7 +42,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "AppShell.xaml",
               "DocumentMoniker": "C:\\xampp\\htdocs\\CITA-355-Project-1\\355FinalProject\\AppShell.xaml",
               "RelativeDocumentMoniker": "AppShell.xaml",
@@ -46,25 +50,11 @@
               "RelativeToolTip": "AppShell.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-30T15:36:03.425Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-30T15:36:03.425Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "HomePage.xaml",
-              "DocumentMoniker": "C:\\xampp\\htdocs\\CITA-355-Project-1\\355FinalProject\\Pages\\HomePage.xaml",
-              "RelativeDocumentMoniker": "Pages\\HomePage.xaml",
-              "ToolTip": "C:\\xampp\\htdocs\\CITA-355-Project-1\\355FinalProject\\Pages\\HomePage.xaml",
-              "RelativeToolTip": "Pages\\HomePage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-30T15:19:33.425Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "LoginPage.xaml",
               "DocumentMoniker": "C:\\xampp\\htdocs\\CITA-355-Project-1\\355FinalProject\\Pages\\LoginPage.xaml",
               "RelativeDocumentMoniker": "Pages\\LoginPage.xaml",
@@ -83,9 +73,35 @@
               "RelativeDocumentMoniker": "Pages\\LoginPage.xaml.cs",
               "ToolTip": "C:\\xampp\\htdocs\\CITA-355-Project-1\\355FinalProject\\Pages\\LoginPage.xaml.cs",
               "RelativeToolTip": "Pages\\LoginPage.xaml.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAA1wA8AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-30T15:05:26.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomePage.xaml",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\CITA-355-Project-1\\355FinalProject\\Pages\\HomePage.xaml",
+              "RelativeDocumentMoniker": "Pages\\HomePage.xaml",
+              "ToolTip": "C:\\xampp\\htdocs\\CITA-355-Project-1\\355FinalProject\\Pages\\HomePage.xaml",
+              "RelativeToolTip": "Pages\\HomePage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-30T15:19:33.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomePage.xaml.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\CITA-355-Project-1\\355FinalProject\\Pages\\HomePage.xaml.cs",
+              "RelativeDocumentMoniker": "Pages\\HomePage.xaml.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\CITA-355-Project-1\\355FinalProject\\Pages\\HomePage.xaml.cs",
+              "RelativeToolTip": "Pages\\HomePage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T15:42:05.035Z",
               "EditorCaption": ""
             }
           ]

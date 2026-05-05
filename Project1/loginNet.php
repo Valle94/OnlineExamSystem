@@ -14,6 +14,7 @@ $errors = [ // initialize error messages
 
 // Initialize message and invalid variables.
 $message = '';
+$error= '';
 $invalid = true;
 
 
@@ -51,7 +52,7 @@ if (!$invalid) { // If everything is valid, set some session variables for later
     $_SESSION["studentID"] = $account['StudentID'];
     $_SESSION["logged_in"] = true;
     $message = "Login Successful!";
-    echo json_encode([$message, $account['StudentID']]);
+    echo json_encode([$message, (string)$account['StudentID']]);
 } else {
     $message = "Login Error.";
     echo json_encode([$error, $account['StudentID']]);

@@ -1,3 +1,5 @@
+using System.Net.Http.Json;
+
 namespace _355FinalProject.Pages;
 
 public partial class LoginPage : ContentPage
@@ -22,19 +24,24 @@ public partial class LoginPage : ContentPage
         };
         var content = new FormUrlEncodedContent(data);
         var response = await client.PostAsync("http://localhost/cita-355-project-1/Project1/loginNET.php", content);
-        string result = (await response.Content.ReadAsStringAsync()).Trim();
+        var result = await response.Content.ReadFromJsonAsync<List<string>>();
 
-        switch (result)
+        var parameters = new Dictionary<string, object>
+        {
+            { "StudentID", result[1] }
+        };
+
+        switch (result[0])
         {
             case ("Account not found." or "Incorrect Password"):
-                await DisplayAlertAsync("Success", result, "OK");
+                await DisplayAlertAsync("Success", result[0], "OK");
                 break;
             case ("Login Successful!"):
-                await DisplayAlertAsync("Success", result, "OK");
-                await Shell.Current.GoToAsync("/HomePage");
+                await DisplayAlertAsync("Success", result[0], "OK");
+                await Shell.Current.GoToAsync("/HomePage", parameters);
                 break;
             default:
-                await DisplayAlertAsync("Success", result, "OK");
+                await DisplayAlertAsync("Success", result[0], "OK");
                 break;
         }
 
