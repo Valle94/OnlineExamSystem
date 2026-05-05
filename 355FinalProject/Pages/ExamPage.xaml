@@ -14,12 +14,12 @@
             MaximumHeightRequest="200" />
 
 
-        <RadioButton Content="Max" GroupName="Q1"/>
-        <RadioButton Content="'name' => 'Max'" GroupName="Q1"/>
-        <RadioButton Content="Gabbie" GroupName="Q1"/>
-        <RadioButton Content="'name' => 'Gabbie'" GroupName="Q1"/>
-        <RadioButton Content="Dan" GroupName="Q1"/>
-        <RadioButton Content="'name' => 'Dan'" GroupName="Q1"/>
+        <RadioButton x:Name="q1A" Content="Max" GroupName="Q1"/>
+        <RadioButton x:Name="q1B" Content="'name' => 'Max'" GroupName="Q1"/>
+        <RadioButton x:Name="q1C" Content="Gabbie" GroupName="Q1"/>
+        <RadioButton x:Name="q1D" Content="'name' => 'Gabbie'" GroupName="Q1"/>
+        <RadioButton x:Name="q1E" Content="Dan" GroupName="Q1"/>
+        <RadioButton x:Name="q1F" Content="'name' => 'Dan'" GroupName="Q1"/>
 
 
 
@@ -34,10 +34,10 @@
 
         <Label
             Text="What is the Value of $equals?" />
-        <RadioButton Content="10" GroupName="Q2"/>
-        <RadioButton Content="True" GroupName="Q2"/>
-        <RadioButton Content="False" GroupName="Q2"/>
-        <RadioButton Content="15" GroupName="Q2"/>
+        <RadioButton x:Name="q2A" Content="10" GroupName="Q2"/>
+        <RadioButton x:Name="q2B" Content="True" GroupName="Q2"/>
+        <RadioButton x:Name="q2C" Content="False" GroupName="Q2"/>
+        <RadioButton x:Name="q2D" Content="15" GroupName="Q2"/>
 
         
         
@@ -83,8 +83,49 @@
 
         <Label
             Text="Select all Valid Ways of Embedding a PHP tag Into HTML: " />
-        
-        
+
+        <HorizontalStackLayout>
+            <CheckBox x:Name="chk7" />
+            <Label Text="'&lt;'php'&lt;' '&lt;'/php'&lt;'" VerticalOptions="Center"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+            <CheckBox x:Name="chk8" />
+            <Label Text="'&lt;'?php ?'&lt;'" VerticalOptions="Center"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+            <CheckBox x:Name="chk9" />
+            <Label Text="'&lt;'?= ?'&lt;'" VerticalOptions="Center" />
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+            <CheckBox x:Name="chk10" />
+            <Label Text="'&lt;'php= '&lt;'" VerticalOptions="Center" />
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+            <CheckBox x:Name="chk11" />
+            <Label Text="'&lt;'?php= ?'&lt;'" VerticalOptions="Center" />
+        </HorizontalStackLayout>
+
+
+        <Label Text="Question 5: " />
+        <Label Text="Using the following loop, how many times will 'CITA 355' be printed?" />
+        <Image
+            Source="question2.png"
+            MaximumWidthRequest="100"
+            MaximumHeightRequest="200" />
+
+        <Picker x:Name="answerPicker" Title="Pick an Answer">
+            <Picker.Items>
+                <x:Int>4</x:Int>
+                <x:Int>5</x:Int>
+                <x:Int>6</x:Int>
+                <x:Int>7</x:Int>
+            </Picker.Items>
+        </Picker>
+
 
     </VerticalStackLayout>
 </ContentPage>
