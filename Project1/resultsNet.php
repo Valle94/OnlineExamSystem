@@ -88,7 +88,12 @@ try {
         "wrongCount" => $wrongCount,
         "totalCount" => $totalCount,
         "date" => $date,
-        "time" => $time
+        "time" => $time,
+        "studentAnsQ1" => $studentAnswers["q1"],
+        "studentAnsQ2" => $studentAnswers["q2"],
+        "studentAnsQ3" => $studentAnswers["q3"],
+        "studentAnsQ4" => $studentAnswers["q4"],
+        "studentAnsQ5" => $studentAnswers["q5"]
     ]);
 } 
 

@@ -1,5 +1,7 @@
 namespace _355FinalProject.Pages;
 
+using System.Net.Http.Json;
+
 public partial class ExamPage : ContentPage, IQueryAttributable
 {
     string studentID = "";
@@ -91,9 +93,10 @@ public partial class ExamPage : ContentPage, IQueryAttributable
             "http://localhost/CITA355/CITA-355-Project-1/Project1/resultsNet.php",
             content);
 
-        string result = await response.Content.ReadAsStringAsync();
+        var result = await response.Content.ReadFromJsonAsync<Dictionary<string ,object>>();
+        await Shell.Current.GoToAsync("ResultPage", result);
 
-        await DisplayAlertAsync("Success", result, "OK");
+        //await DisplayAlertAsync("Success", result, "OK");
 
     }
 

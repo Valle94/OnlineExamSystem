@@ -89,7 +89,7 @@
 	<?php //} else { ?> <!-- If the user has taken the exam today, show error -->
 	<!--	<h3>You cannot take the exam more than once per day. <br>
 			Try again tomorrow.</h3>
-	<?php } //?> 
+	<?php //} //?> 
 
 
 

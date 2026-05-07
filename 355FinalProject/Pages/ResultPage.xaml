@@ -36,14 +36,19 @@
         <Label 
             x:Name="Wrong" 
             Text="Wrong Answers: 0" />
-        
+
+        <Label
+            x:Name="Total"
+            Text="Total: " />
+
         <Label 
             x:Name="Date" 
             Text="Date: " />
-        
+
         <Label 
             x:Name="Time" 
             Text="Time: " />
+
 
         <Label 
             Text="Detailed Review"
@@ -84,7 +89,7 @@
         
         <Label 
             x:Name="Q3Correct"
-            Text="Correct Answer: " />
+            Text="Correct Answer: B, D, and F" />
 
         <Label 
             Text="Question 4" 
@@ -97,7 +102,7 @@
         
         <Label 
             x:Name="Q4Correct" 
-            Text="Correct Answer: " />
+            Text="Correct Answer: B and C " />
 
         <Label 
             Text="Question 5" 
@@ -106,10 +111,10 @@
         <Label 
             x:Name="Q5Student" 
             Text="Your Answer: " />
-        
+
         <Label 
             x:Name="Q5Correct" 
-            Text="Correct Answer: " />
+            Text="Correct Answer: 6" />
 
     </VerticalStackLayout>
 </ContentPage>

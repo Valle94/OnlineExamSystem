@@ -119,12 +119,17 @@
 
         <Picker x:Name="answerPicker" Title="Pick an Answer">
             <Picker.Items>
-                <x:Int>4</x:Int>
-                <x:Int>5</x:Int>
-                <x:Int>6</x:Int>
-                <x:Int>7</x:Int>
+                <x:String>4</x:String>
+                <x:String>5</x:String>
+                <x:String>6</x:String>
+                <x:String>7</x:String>
             </Picker.Items>
         </Picker>
+
+
+        <Button
+            Text="Submit Exam"
+             Clicked="SubmitExam_Clicked"/>
 
 
     </VerticalStackLayout>

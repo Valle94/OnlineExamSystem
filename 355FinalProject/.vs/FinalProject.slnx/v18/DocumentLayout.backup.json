@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "D:\\htserver\\htdocs\\CITA355\\CITA-355-Project-1\\355FinalProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F527D74A-F35C-1C6D-4C76-CBAA4E2BEECC}|FinalProject.csproj|d:\\htserver\\htdocs\\cita355\\cita-355-project-1\\355finalproject\\pages\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F527D74A-F35C-1C6D-4C76-CBAA4E2BEECC}|FinalProject.csproj|solutionrelative:pages\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F527D74A-F35C-1C6D-4C76-CBAA4E2BEECC}|FinalProject.csproj|d:\\htserver\\htdocs\\cita355\\cita-355-project-1\\355finalproject\\pages\\exampage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F527D74A-F35C-1C6D-4C76-CBAA4E2BEECC}|FinalProject.csproj|solutionrelative:pages\\exampage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F527D74A-F35C-1C6D-4C76-CBAA4E2BEECC}|FinalProject.csproj|d:\\htserver\\htdocs\\cita355\\cita-355-project-1\\355finalproject\\pages\\exampage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F527D74A-F35C-1C6D-4C76-CBAA4E2BEECC}|FinalProject.csproj|solutionrelative:pages\\exampage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F527D74A-F35C-1C6D-4C76-CBAA4E2BEECC}|FinalProject.csproj|d:\\htserver\\htdocs\\cita355\\cita-355-project-1\\355finalproject\\pages\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F527D74A-F35C-1C6D-4C76-CBAA4E2BEECC}|FinalProject.csproj|solutionrelative:pages\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F527D74A-F35C-1C6D-4C76-CBAA4E2BEECC}|FinalProject.csproj|d:\\htserver\\htdocs\\cita355\\cita-355-project-1\\355finalproject\\pages\\resultpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F527D74A-F35C-1C6D-4C76-CBAA4E2BEECC}|FinalProject.csproj|solutionrelative:pages\\resultpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F527D74A-F35C-1C6D-4C76-CBAA4E2BEECC}|FinalProject.csproj|d:\\htserver\\htdocs\\cita355\\cita-355-project-1\\355finalproject\\pages\\resultpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F527D74A-F35C-1C6D-4C76-CBAA4E2BEECC}|FinalProject.csproj|solutionrelative:pages\\resultpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,7 +38,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
+              "Title": "ResultPage.xaml.cs",
+              "DocumentMoniker": "D:\\htserver\\htdocs\\CITA355\\CITA-355-Project-1\\355FinalProject\\Pages\\ResultPage.xaml.cs",
+              "RelativeDocumentMoniker": "Pages\\ResultPage.xaml.cs",
+              "ToolTip": "D:\\htserver\\htdocs\\CITA355\\CITA-355-Project-1\\355FinalProject\\Pages\\ResultPage.xaml.cs",
+              "RelativeToolTip": "Pages\\ResultPage.xaml.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwCUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T03:10:06.521Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ResultPage.xaml",
+              "DocumentMoniker": "D:\\htserver\\htdocs\\CITA355\\CITA-355-Project-1\\355FinalProject\\Pages\\ResultPage.xaml",
+              "RelativeDocumentMoniker": "Pages\\ResultPage.xaml",
+              "ToolTip": "D:\\htserver\\htdocs\\CITA355\\CITA-355-Project-1\\355FinalProject\\Pages\\ResultPage.xaml",
+              "RelativeToolTip": "Pages\\ResultPage.xaml",
+              "ViewState": "AgIAACIAAAAAAAAAAAAAADUAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-07T02:59:07.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "LoginPage.xaml",
               "DocumentMoniker": "D:\\htserver\\htdocs\\CITA355\\CITA-355-Project-1\\355FinalProject\\Pages\\LoginPage.xaml",
               "RelativeDocumentMoniker": "Pages\\LoginPage.xaml",
@@ -43,26 +77,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "ExamPage.xaml",
               "DocumentMoniker": "D:\\htserver\\htdocs\\CITA355\\CITA-355-Project-1\\355FinalProject\\Pages\\ExamPage.xaml",
               "RelativeDocumentMoniker": "Pages\\ExamPage.xaml",
               "ToolTip": "D:\\htserver\\htdocs\\CITA355\\CITA-355-Project-1\\355FinalProject\\Pages\\ExamPage.xaml",
               "RelativeToolTip": "Pages\\ExamPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-05-05T16:48:39.698Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ExamPage.xaml.cs",
               "DocumentMoniker": "D:\\htserver\\htdocs\\CITA355\\CITA-355-Project-1\\355FinalProject\\Pages\\ExamPage.xaml.cs",
               "RelativeDocumentMoniker": "Pages\\ExamPage.xaml.cs",
               "ToolTip": "D:\\htserver\\htdocs\\CITA355\\CITA-355-Project-1\\355FinalProject\\Pages\\ExamPage.xaml.cs",
               "RelativeToolTip": "Pages\\ExamPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFoAAABSAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-05T16:48:39.73Z",
               "EditorCaption": ""
