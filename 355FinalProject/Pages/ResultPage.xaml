@@ -2,119 +2,143 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="_355FinalProject.Pages.ResultPage"
-             Title="ResultPage">
-    <VerticalStackLayout>
-        <Label Text="Exam Results"
-               FontSize="28"
-               FontAttributes="Bold"
-               HorizontalOptions="Center" />
+             Title="ResultPage"
+             BackgroundColor="#D6EAF8">
 
-        <Label 
-            x:Name="StudentId" 
-            Text="Student ID: " />
-        
-        <Label 
-            x:Name="FirstName" 
-            Text="First Name: " />
-        
-        <Label 
-            x:Name="LastName" 
-            Text="Last Name: " />
-        
-        <Label 
-            x:Name="Email" 
-            Text="Email: " />
+    <ContentPage.Resources>
+        <Style x:Key="SectionTitleStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="24" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="TextColor" Value="Black" />
+        </Style>
 
-        <Label 
-            x:Name="Score"
-            Text="Score: 0%" />
+        <Style x:Key="InfoLabelStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="TextColor" Value="Black" />
+            <Setter Property="LineBreakMode" Value="WordWrap" />
+        </Style>
 
-        <Label 
-            x:Name="Correct" 
-            Text="Correct Answers: 0" />
-        
-        <Label 
-            x:Name="Wrong" 
-            Text="Wrong Answers: 0" />
+        <Style x:Key="ReviewTitleStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="TextColor" Value="Black" />
+        </Style>
+    </ContentPage.Resources>
 
-        <Label
-            x:Name="Total"
-            Text="Total: " />
+    <ScrollView>
+        <VerticalStackLayout Padding="8,10,8,30" Spacing="18">
 
-        <Label 
-            x:Name="Date" 
-            Text="Date: " />
+            <Border BackgroundColor="#FEF9E7"
+                    StrokeThickness="0"
+                    Padding="6">
+                <Label Text="CITA 355 Exam Results"
+                       HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       FontSize="34"
+                       FontAttributes="Bold"
+                       TextColor="#1F4E79" />
+            </Border>
 
-        <Label 
-            x:Name="Time" 
-            Text="Time: " />
+            <Border BackgroundColor="#FCF3CF"
+                    StrokeThickness="0"
+                    StrokeShape="RoundRectangle 10"
+                    Padding="24"
+                    Margin="0,20,0,0"
+                    HorizontalOptions="Center"
+                    MaximumWidthRequest="800">
 
+                <VerticalStackLayout Spacing="24">
 
-        <Label 
-            Text="Detailed Review"
-            FontSize="22"
-            FontAttributes="Bold" />
+                    <Label Text="Exam Summary"
+                           Style="{StaticResource SectionTitleStyle}" />
 
-        <Label
-            Text="Question 1" 
-            FontAttributes="Bold" />
-        
-        <Label 
-            x:Name="Q1Student" 
-            Text="Your Answer: " />
+                    <VerticalStackLayout Spacing="8">
+                        <Label x:Name="StudentId" Text="Student ID: " Style="{StaticResource InfoLabelStyle}" />
+                        <Label x:Name="FirstName" Text="First Name: " Style="{StaticResource InfoLabelStyle}" />
+                        <Label x:Name="LastName" Text="Last Name: " Style="{StaticResource InfoLabelStyle}" />
+                        <Label x:Name="Email" Text="Email: " Style="{StaticResource InfoLabelStyle}" />
+                        <Label x:Name="Score" Text="Score: 0%" Style="{StaticResource InfoLabelStyle}" />
+                        <Label x:Name="Correct" Text="Correct Answers: 0" Style="{StaticResource InfoLabelStyle}" />
+                        <Label x:Name="Wrong" Text="Wrong Answers: 0" Style="{StaticResource InfoLabelStyle}" />
+                        <Label x:Name="Total" Text="Total Questions: 5" Style="{StaticResource InfoLabelStyle}" />
+                        <Label x:Name="Date" Text="Date: " Style="{StaticResource InfoLabelStyle}" />
+                        <Label x:Name="Time" Text="Time: " Style="{StaticResource InfoLabelStyle}" />
+                    </VerticalStackLayout>
 
-        <Label 
-            x:Name="Q1Correct" 
-            Text="Correct Answer: C" />
+                    <BoxView HeightRequest="1" Color="#D9CFA7" />
 
-        <Label 
-            Text="Question 2" 
-            FontAttributes="Bold" />
-        
-        <Label 
-            x:Name="Q2Student" 
-            Text="Your Answer: " />
-        
-        <Label 
-            x:Name="Q2Correct" 
-            Text="Correct Answer: C" />
+                    <Label Text="Question Review"
+                           Style="{StaticResource SectionTitleStyle}" />
 
-        <Label 
-            Text="Question 3" 
-            FontAttributes="Bold" />
-        
-        <Label 
-            x:Name="Q3Student" 
-            Text="Your Answer: " />
-        
-        <Label 
-            x:Name="Q3Correct"
-            Text="Correct Answer: B, D, and F" />
+                    <VerticalStackLayout Spacing="18">
 
-        <Label 
-            Text="Question 4" 
-            FontAttributes="Bold" />
-        
-        
-        <Label 
-            x:Name="Q4Student" 
-            Text="Your Answer: " />
-        
-        <Label 
-            x:Name="Q4Correct" 
-            Text="Correct Answer: B and C " />
+                        <Border BackgroundColor="#FEF9E7"
+                                StrokeThickness="0"
+                                StrokeShape="RoundRectangle 8"
+                                Padding="14">
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="Question 1" Style="{StaticResource ReviewTitleStyle}" />
+                                <Label x:Name="Q1Student" Text="Your Answer: " Style="{StaticResource InfoLabelStyle}" />
+                                <Label x:Name="Q1Correct" Text="Correct Answer: C" Style="{StaticResource InfoLabelStyle}" />
+                            </VerticalStackLayout>
+                        </Border>
 
-        <Label 
-            Text="Question 5" 
-            FontAttributes="Bold" />
-        
-        <Label 
-            x:Name="Q5Student" 
-            Text="Your Answer: " />
+                        <Border BackgroundColor="#FEF9E7"
+                                StrokeThickness="0"
+                                StrokeShape="RoundRectangle 8"
+                                Padding="14">
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="Question 2" Style="{StaticResource ReviewTitleStyle}" />
+                                <Label x:Name="Q2Student" Text="Your Answer: " Style="{StaticResource InfoLabelStyle}" />
+                                <Label x:Name="Q2Correct" Text="Correct Answer: C" Style="{StaticResource InfoLabelStyle}" />
+                            </VerticalStackLayout>
+                        </Border>
 
-        <Label 
-            x:Name="Q5Correct" 
-            Text="Correct Answer: 6" />
+                        <Border BackgroundColor="#FEF9E7"
+                                StrokeThickness="0"
+                                StrokeShape="RoundRectangle 8"
+                                Padding="14">
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="Question 3" Style="{StaticResource ReviewTitleStyle}" />
+                                <Label x:Name="Q3Student" Text="Your Answer: " Style="{StaticResource InfoLabelStyle}" />
+                                <Label x:Name="Q3Correct" Text="Correct Answer: B, D, F" Style="{StaticResource InfoLabelStyle}" />
+                            </VerticalStackLayout>
+                        </Border>
 
-    </VerticalStackLayout>
+                        <Border BackgroundColor="#FEF9E7"
+                                StrokeThickness="0"
+                                StrokeShape="RoundRectangle 8"
+                                Padding="14">
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="Question 4" Style="{StaticResource ReviewTitleStyle}" />
+                                <Label x:Name="Q4Student" Text="Your Answer: " Style="{StaticResource InfoLabelStyle}" />
+                                <Label x:Name="Q4Correct" Text="Correct Answer: B, C" Style="{StaticResource InfoLabelStyle}" />
+                            </VerticalStackLayout>
+                        </Border>
+
+                        <Border BackgroundColor="#FEF9E7"
+                                StrokeThickness="0"
+                                StrokeShape="RoundRectangle 8"
+                                Padding="14">
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="Question 5" Style="{StaticResource ReviewTitleStyle}" />
+                                <Label x:Name="Q5Student" Text="Your Answer: " Style="{StaticResource InfoLabelStyle}" />
+                                <Label x:Name="Q5Correct" Text="Correct Answer: 6" Style="{StaticResource InfoLabelStyle}" />
+                            </VerticalStackLayout>
+                        </Border>
+
+                    </VerticalStackLayout>
+
+                    <Button Text="Go Home"
+                            Clicked="GoHome"
+                            BackgroundColor="#99F3B4"
+                            TextColor="#222222"
+                            FontSize="16"
+                            FontAttributes="Bold"
+                            CornerRadius="6"
+                            HeightRequest="48" />
+                </VerticalStackLayout>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

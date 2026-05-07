@@ -2,135 +2,204 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="_355FinalProject.Pages.ExamPage"
-             Title="ExamPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Question 1: " />
-        <Label
-            Text="Consider The Following Associative Array:" />
-        <Image
-            Source="question1.png"
-            MaximumWidthRequest="100"
-            MaximumHeightRequest="200" />
+             Title="ExamPage"
+             BackgroundColor="#5499C7">
 
+    <ContentPage.Resources>
+        <Style x:Key="QuestionTitleStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="26" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="TextColor" Value="Black" />
+        </Style>
 
-        <RadioButton x:Name="q1A" Content="Max" GroupName="Q1"/>
-        <RadioButton x:Name="q1B" Content="'name' => 'Max'" GroupName="Q1"/>
-        <RadioButton x:Name="q1C" Content="Gabbie" GroupName="Q1"/>
-        <RadioButton x:Name="q1D" Content="'name' => 'Gabbie'" GroupName="Q1"/>
-        <RadioButton x:Name="q1E" Content="Dan" GroupName="Q1"/>
-        <RadioButton x:Name="q1F" Content="'name' => 'Dan'" GroupName="Q1"/>
+        <Style x:Key="QuestionTextStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="TextColor" Value="Black" />
+            <Setter Property="LineBreakMode" Value="WordWrap" />
+        </Style>
 
+        <Style x:Key="AnswerLabelStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="TextColor" Value="Black" />
+            <Setter Property="VerticalOptions" Value="Center" />
+        </Style>
 
+        <Style x:Key="QuestionImageStyle" TargetType="Image">
+            <Setter Property="Aspect" Value="AspectFit" />
+            <Setter Property="HorizontalOptions" Value="Fill" />
+        </Style>
+    </ContentPage.Resources>
 
-        <Label 
-            Text="Question 2: " />
-        <Label
-            Text="Consider The Following Code:" />
-        <Image
-            Source="question2.png"
-            MaximumWidthRequest="100"
-            MaximumHeightRequest="200" />
+    <ScrollView>
+        <VerticalStackLayout Padding="8,10,8,30" Spacing="18">
 
-        <Label
-            Text="What is the Value of $equals?" />
-        <RadioButton x:Name="q2A" Content="10" GroupName="Q2"/>
-        <RadioButton x:Name="q2B" Content="True" GroupName="Q2"/>
-        <RadioButton x:Name="q2C" Content="False" GroupName="Q2"/>
-        <RadioButton x:Name="q2D" Content="15" GroupName="Q2"/>
+            <Border BackgroundColor="#FEF9E7"
+                    StrokeThickness="0"
+                    Padding="6">
+                <Label Text="CITA 355 Online Exam"
+                       HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       FontSize="34"
+                       FontAttributes="Bold"
+                       TextColor="#1F4E79" />
+            </Border>
 
-        
-        
-        <Label 
-            Text="Question 3: " />
-        <Label
-            Text="Select all Vaild PHP Variables:" />
+            <Label Text="Please answer all questions and submit when done."
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   FontSize="16"
+                   TextColor="Black" />
 
-        <HorizontalStackLayout>
-            <CheckBox x:Name="chk1" />
-            <Label Text="number = 5" VerticalOptions="Center" />
-        </HorizontalStackLayout>
+            <Border BackgroundColor="#FCF3CF"
+                    StrokeThickness="0"
+                    StrokeShape="RoundRectangle 10"
+                    Padding="24"
+                    Margin="0,20,0,0"
+                    HorizontalOptions="Center"
+                    MaximumWidthRequest="800">
 
-        <HorizontalStackLayout>
-            <CheckBox x:Name="chk2" />
-            <Label Text="$number = 5" VerticalOptions="Center" />
-        </HorizontalStackLayout>
+                <VerticalStackLayout Spacing="28">
 
-        <HorizontalStackLayout>
-            <CheckBox x:Name="chk3" />
-            <Label Text="$5number = 5" VerticalOptions="Center" />
-        </HorizontalStackLayout>
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="1. Consider the following associative array:"
+                               Style="{StaticResource QuestionTitleStyle}" />
 
-        <HorizontalStackLayout>
-            <CheckBox x:Name="chk4" />
-            <Label Text="$_number = 5" VerticalOptions="Center" />
-        </HorizontalStackLayout>
+                        <Image Source="question1.png"
+                               Style="{StaticResource QuestionImageStyle}"
+                               MaximumWidthRequest="700" />
 
-        <HorizontalStackLayout>
-            <CheckBox x:Name="chk5" />
-            <Label Text="$number-5 = 5" VerticalOptions="Center" />
-        </HorizontalStackLayout>
+                        <Label Text="What will the following line of code output?"
+                               Style="{StaticResource QuestionTextStyle}" />
 
-        <HorizontalStackLayout>
-            <CheckBox x:Name="chk6" />
-            <Label Text="$number_5 = 5" VerticalOptions="Center" />
-        </HorizontalStackLayout>
+                        <Label Text="echo $students[1]['name']"
+                               Style="{StaticResource QuestionTextStyle}" />
 
+                        <RadioButton x:Name="q1A" Content="A: Max" GroupName="Q1" TextColor="Black"  FontAttributes="Bold" FontSize="18"/>
+                        <RadioButton x:Name="q1B" Content="B: 'name' =&gt; 'Max'" GroupName="Q1" TextColor="Black" FontAttributes="Bold" FontSize="18" />
+                        <RadioButton x:Name="q1C" Content="C: Gabbie" GroupName="Q1" TextColor="Black" FontAttributes="Bold" FontSize="18"/>
+                        <RadioButton x:Name="q1D" Content="D: 'name' =&gt; 'Gabbie'" GroupName="Q1" TextColor="Black" FontAttributes="Bold" FontSize="18"/>
+                        <RadioButton x:Name="q1E" Content="E: Dan" GroupName="Q1" TextColor="Black" FontAttributes="Bold" FontSize="18"/>
+                        <RadioButton x:Name="q1F" Content="F: 'name' =&gt; 'Dan'" GroupName="Q1" TextColor="Black" FontAttributes="Bold" FontSize="18"/>
+                    </VerticalStackLayout>
 
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="2. Consider the following code:"
+                               Style="{StaticResource QuestionTitleStyle}" />
 
-        <Label
-            Text="Question 4: " />
+                        <Image Source="question2.png"
+                               Style="{StaticResource QuestionImageStyle}"
+                               MaximumWidthRequest="700" />
 
-        <Label
-            Text="Select all Valid Ways of Embedding a PHP tag Into HTML: " />
+                        <Label Text="What is the value of $equals?"
+                               Style="{StaticResource QuestionTextStyle}" />
 
-        <HorizontalStackLayout>
-            <CheckBox x:Name="chk7" />
-            <Label Text="'&lt;'php'&lt;' '&lt;'/php'&lt;'" VerticalOptions="Center"/>
-        </HorizontalStackLayout>
+                        <RadioButton x:Name="q2A" Content="A: 10" GroupName="Q2" TextColor="Black" FontAttributes="Bold" FontSize="18"/>
+                        <RadioButton x:Name="q2B" Content="B: True" GroupName="Q2" TextColor="Black" FontAttributes="Bold" FontSize="18"/>
+                        <RadioButton x:Name="q2C" Content="C: False" GroupName="Q2" TextColor="Black" FontAttributes="Bold" FontSize="18"/>
+                        <RadioButton x:Name="q2D" Content="D: 15" GroupName="Q2" TextColor="Black" FontAttributes="Bold" FontSize="18"/>
+                    </VerticalStackLayout>
 
-        <HorizontalStackLayout>
-            <CheckBox x:Name="chk8" />
-            <Label Text="'&lt;'?php ?'&lt;'" VerticalOptions="Center"/>
-        </HorizontalStackLayout>
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="3. Select All Valid PHP Variables:"
+                               Style="{StaticResource QuestionTitleStyle}" />
 
-        <HorizontalStackLayout>
-            <CheckBox x:Name="chk9" />
-            <Label Text="'&lt;'?= ?'&lt;'" VerticalOptions="Center" />
-        </HorizontalStackLayout>
+                        <HorizontalStackLayout Spacing="10">
+                            <CheckBox x:Name="chk1" />
+                            <Label Text="A: number = 5" Style="{StaticResource AnswerLabelStyle}" />
+                        </HorizontalStackLayout>
 
-        <HorizontalStackLayout>
-            <CheckBox x:Name="chk10" />
-            <Label Text="'&lt;'php= '&lt;'" VerticalOptions="Center" />
-        </HorizontalStackLayout>
+                        <HorizontalStackLayout Spacing="10">
+                            <CheckBox x:Name="chk2" />
+                            <Label Text="B: $number = 5" Style="{StaticResource AnswerLabelStyle}" />
+                        </HorizontalStackLayout>
 
-        <HorizontalStackLayout>
-            <CheckBox x:Name="chk11" />
-            <Label Text="'&lt;'?php= ?'&lt;'" VerticalOptions="Center" />
-        </HorizontalStackLayout>
+                        <HorizontalStackLayout Spacing="10">
+                            <CheckBox x:Name="chk3" />
+                            <Label Text="C: $5number = 5" Style="{StaticResource AnswerLabelStyle}" />
+                        </HorizontalStackLayout>
 
+                        <HorizontalStackLayout Spacing="10">
+                            <CheckBox x:Name="chk4" />
+                            <Label Text="D: $_number = 5" Style="{StaticResource AnswerLabelStyle}" />
+                        </HorizontalStackLayout>
 
-        <Label Text="Question 5: " />
-        <Label Text="Using the following loop, how many times will 'CITA 355' be printed?" />
-        <Image
-            Source="question2.png"
-            MaximumWidthRequest="100"
-            MaximumHeightRequest="200" />
+                        <HorizontalStackLayout Spacing="10">
+                            <CheckBox x:Name="chk5" />
+                            <Label Text="E: $number-5 = 5" Style="{StaticResource AnswerLabelStyle}" />
+                        </HorizontalStackLayout>
 
-        <Picker x:Name="answerPicker" Title="Pick an Answer">
-            <Picker.Items>
-                <x:String>4</x:String>
-                <x:String>5</x:String>
-                <x:String>6</x:String>
-                <x:String>7</x:String>
-            </Picker.Items>
-        </Picker>
+                        <HorizontalStackLayout Spacing="10">
+                            <CheckBox x:Name="chk6" />
+                            <Label Text="F: $number_5 = 5" Style="{StaticResource AnswerLabelStyle}" />
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
 
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="4. Select All Valid Ways of Embedding a PHP Tag Into HTML:"
+                               Style="{StaticResource QuestionTitleStyle}" />
 
-        <Button
-            Text="Submit Exam"
-             Clicked="SubmitExam_Clicked"/>
+                        <HorizontalStackLayout Spacing="10">
+                            <CheckBox x:Name="chk7" />
+                            <Label Text="A: &lt;php&gt; &lt;/php&gt;" Style="{StaticResource AnswerLabelStyle}" />
+                        </HorizontalStackLayout>
 
+                        <HorizontalStackLayout Spacing="10">
+                            <CheckBox x:Name="chk8" />
+                            <Label Text="B: &lt;?php ?&gt;" Style="{StaticResource AnswerLabelStyle}" />
+                        </HorizontalStackLayout>
 
-    </VerticalStackLayout>
+                        <HorizontalStackLayout Spacing="10">
+                            <CheckBox x:Name="chk9" />
+                            <Label Text="C: &lt;?= ?&gt;" Style="{StaticResource AnswerLabelStyle}" />
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout Spacing="10">
+                            <CheckBox x:Name="chk10" />
+                            <Label Text="D: &lt;php= ?&gt;" Style="{StaticResource AnswerLabelStyle}" />
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout Spacing="10">
+                            <CheckBox x:Name="chk11" />
+                            <Label Text="E: &lt;?php= ?&gt;" Style="{StaticResource AnswerLabelStyle}" />
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="5. Using the following loop, how many times will &quot;CITA 355&quot; be printed?"
+                               Style="{StaticResource QuestionTitleStyle}" />
+
+                        <Image Source="question5.png"
+                               Style="{StaticResource QuestionImageStyle}"
+                               MaximumWidthRequest="700" />
+
+                        <Label Text="Number of prints:"
+                               Style="{StaticResource QuestionTextStyle}" />
+
+                        <Picker x:Name="answerPicker"
+                                Title="Pick an Answer"
+                                BackgroundColor="White"
+                                TextColor="Black">
+                            <Picker.Items>
+                                <x:String>4</x:String>
+                                <x:String>5</x:String>
+                                <x:String>6</x:String>
+                                <x:String>7</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </VerticalStackLayout>
+
+                    <Button Text="Submit Exam"
+                            Clicked="SubmitExam_Clicked"
+                            BackgroundColor="#99F3B4"
+                            TextColor="#222222"
+                            FontSize="16"
+                            FontAttributes="Bold"
+                            CornerRadius="6"
+                            HeightRequest="48" />
+                </VerticalStackLayout>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

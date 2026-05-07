@@ -12,23 +12,21 @@ public partial class ResultPage : ContentPage, IQueryAttributable
 
     public void ApplyQueryAttributes(IDictionary<string, object> query)
     {
-        StudentId.Text = query["studentID"].ToString();
-        FirstName.Text = query["firstName"].ToString();
-        LastName.Text = query["lastName"].ToString();
-        Email.Text = query["email"].ToString();
-        Score.Text = query["score"].ToString();
-        Correct.Text = query["correctCount"].ToString();
-        Wrong.Text = query["wrongCount"].ToString();
-        Date.Text = query["date"].ToString();
-        Time.Text = query["time"].ToString();
-        Q1Student.Text = query["studentAnsQ1"].ToString();
-        Q2Student.Text = query["studentAnsQ2"].ToString();
-        Q3Student.Text = query["studentAnsQ3"].ToString();
-        Q4Student.Text = query["studentAnsQ4"].ToString();
-        Q5Student.Text = query["studentAnsQ5"].ToString();
-
-
-
+        StudentId.Text = $"Student ID: {query["studentID"]}";
+        FirstName.Text = $"First Name: {query["firstName"]}";
+        LastName.Text = $"Last Name: {query["lastName"]}";
+        Email.Text = $"Email: {query["email"]}";
+        Score.Text = $"Score: {query["score"]}%";
+        Correct.Text = $"Correct Answers: {query["correctCount"]}";
+        Wrong.Text = $"Wrong Answers: {query["wrongCount"]}";
+        Total.Text = $"Total Questions: {query["totalCount"]}";
+        Date.Text = $"Date: {query["date"]}";
+        Time.Text = $"Time: {query["time"]}";
+        Q1Student.Text = $"Your Answer: {query["studentAnsQ1"]}";
+        Q2Student.Text = $"Your Answer: {query["studentAnsQ2"]}";
+        Q3Student.Text = $"Your Answer: {query["studentAnsQ3"]}";
+        Q4Student.Text = $"Your Answer: {query["studentAnsQ4"]}";
+        Q5Student.Text = $"Your Answer: {query["studentAnsQ5"]}";
     }
 
     private async void GoHome(object sender, EventArgs e)

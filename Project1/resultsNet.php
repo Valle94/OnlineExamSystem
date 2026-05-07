@@ -80,9 +80,15 @@ $time = date("H:i:s");
 try {
     $submitStudentExam = $pdo->query(SubmitExam($studentID, $date, $time, $score, $correctCount, $wrongCount));
 
+    $statement = $pdo->query(SELECT * FROM account WHERE StudentID = $studentID)
+    $thisStudent = $statement->fetch();
+
     echo json_encode([
         "success" => true,
         "studentID" => $studentID,
+        "firstName" => $thisStudent["FirstName"],
+        "lasttName" => $thisStudent["LastName"],
+        "email" => $thisStudent["Email"],
         "score" => $score,
         "correctCount" => $correctCount,
         "wrongCount" => $wrongCount,
