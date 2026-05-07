@@ -4,9 +4,112 @@
              x:Class="_355FinalProject.Pages.ResultPage"
              Title="ResultPage">
     <VerticalStackLayout>
+        <Label Text="Exam Results"
+               FontSize="28"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
         <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            x:Name="StudentId" 
+            Text="Student ID: " />
+        
+        <Label 
+            x:Name="FirstName" 
+            Text="First Name: " />
+        
+        <Label 
+            x:Name="LastName" 
+            Text="Last Name: " />
+        
+        <Label 
+            x:Name="Email" 
+            Text="Email: " />
+
+        <Label 
+            x:Name="Score"
+            Text="Score: 0%" />
+
+        <Label 
+            x:Name="Correct" 
+            Text="Correct Answers: 0" />
+        
+        <Label 
+            x:Name="Wrong" 
+            Text="Wrong Answers: 0" />
+        
+        <Label 
+            x:Name="Date" 
+            Text="Date: " />
+        
+        <Label 
+            x:Name="Time" 
+            Text="Time: " />
+
+        <Label 
+            Text="Detailed Review"
+            FontSize="22"
+            FontAttributes="Bold" />
+
+        <Label
+            Text="Question 1" 
+            FontAttributes="Bold" />
+        
+        <Label 
+            x:Name="Q1Student" 
+            Text="Your Answer: " />
+
+        <Label 
+            x:Name="Q1Correct" 
+            Text="Correct Answer: C" />
+
+        <Label 
+            Text="Question 2" 
+            FontAttributes="Bold" />
+        
+        <Label 
+            x:Name="Q2Student" 
+            Text="Your Answer: " />
+        
+        <Label 
+            x:Name="Q2Correct" 
+            Text="Correct Answer: C" />
+
+        <Label 
+            Text="Question 3" 
+            FontAttributes="Bold" />
+        
+        <Label 
+            x:Name="Q3Student" 
+            Text="Your Answer: " />
+        
+        <Label 
+            x:Name="Q3Correct"
+            Text="Correct Answer: " />
+
+        <Label 
+            Text="Question 4" 
+            FontAttributes="Bold" />
+        
+        
+        <Label 
+            x:Name="Q4Student" 
+            Text="Your Answer: " />
+        
+        <Label 
+            x:Name="Q4Correct" 
+            Text="Correct Answer: " />
+
+        <Label 
+            Text="Question 5" 
+            FontAttributes="Bold" />
+        
+        <Label 
+            x:Name="Q5Student" 
+            Text="Your Answer: " />
+        
+        <Label 
+            x:Name="Q5Correct" 
+            Text="Correct Answer: " />
+
     </VerticalStackLayout>
 </ContentPage>

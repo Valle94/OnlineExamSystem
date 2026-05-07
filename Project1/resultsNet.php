@@ -76,10 +76,30 @@ $date = date("Y-m-d");
 $time = date("H:i:s");
 
 //Saving the Results of the test into the Results Table in SQL
+// try is like an if statment and catch is like the else statment
 try {
-	$submitStudentExam = $pdo->query(SubmitExam($studentID, $date, $time, $score, $correctCount, $wrongCount));
-} catch (Exception $e) {
-	echo "There was an error submitting your results.";
+    $submitStudentExam = $pdo->query(SubmitExam($studentID, $date, $time, $score, $correctCount, $wrongCount));
+
+    echo json_encode([
+        "success" => true,
+        "studentID" => $studentID,
+        "score" => $score,
+        "correctCount" => $correctCount,
+        "wrongCount" => $wrongCount,
+        "totalCount" => $totalCount,
+        "date" => $date,
+        "time" => $time
+    ]);
+} 
+
+catch (Exception $e) 
+{
+    echo json_encode([
+        "success" => false,
+        "message" => "There was an error submitting your results."
+    	]);
 }
 
+
 ?>
+
