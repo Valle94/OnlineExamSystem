@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\htserver\\htdocs\\CITA355\\CITA-355-Project-1\\355FinalProject\\FinalProject.csproj": {}
+    "C:\\xampp\\htdocs\\CITA-355-Project-1\\355FinalProject\\FinalProject.csproj": {}
   },
   "projects": {
-    "D:\\htserver\\htdocs\\CITA355\\CITA-355-Project-1\\355FinalProject\\FinalProject.csproj": {
+    "C:\\xampp\\htdocs\\CITA-355-Project-1\\355FinalProject\\FinalProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\htserver\\htdocs\\CITA355\\CITA-355-Project-1\\355FinalProject\\FinalProject.csproj",
+        "projectUniqueName": "C:\\xampp\\htdocs\\CITA-355-Project-1\\355FinalProject\\FinalProject.csproj",
         "projectName": "FinalProject",
-        "projectPath": "D:\\htserver\\htdocs\\CITA355\\CITA-355-Project-1\\355FinalProject\\FinalProject.csproj",
-        "packagesPath": "C:\\Users\\antho\\.nuget\\packages\\",
-        "outputPath": "D:\\htserver\\htdocs\\CITA355\\CITA-355-Project-1\\355FinalProject\\obj\\",
+        "projectPath": "C:\\xampp\\htdocs\\CITA-355-Project-1\\355FinalProject\\FinalProject.csproj",
+        "packagesPath": "C:\\Users\\Max\\.nuget\\packages\\",
+        "outputPath": "C:\\xampp\\htdocs\\CITA-355-Project-1\\355FinalProject\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\antho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Max\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

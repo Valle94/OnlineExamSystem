@@ -1,5 +1,41 @@
 <?php
-require "requires.php";
+
+// Add at the VERY TOP of resultsNet.php (before any other code):
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+// Check for POST data
+if (empty($_POST)) {
+    echo json_encode(["success" => false, "message" => "No POST data received"]);
+    exit;
+}
+
+$studentID = (int)($_POST['StudentID'] ?? 0);
+if ($studentID == 0) {
+    echo json_encode(["success" => false, "message" => "Invalid Student ID"]);
+    exit;
+}
+
+require "dbconnection.php";
+
+function SubmitExam(
+    int $studentid,
+    string $date,
+    string $time,
+    float $score,
+    int $correctAnswers,
+    int $wrongAnswers
+) {
+    return "INSERT INTO examresults (StudentID, Date, Time, Score, CorrectAnswers, WrongAnswers)
+            VALUES (
+                $studentid,
+                '$date',
+                '$time',
+                $score,
+                $correctAnswers,
+                $wrongAnswers
+            )";
+}
 
 $studentID = (int)$_POST['StudentID'];
 
@@ -22,14 +58,14 @@ $questions =
 
 	];
 
-$studentAnswers =
-	[
-		"q1" => $_POST['q1'] ?? "",
-		"q2" => $_POST['q2'] ?? "",
-		"q3" => json_decode($_POST['q3']) ?? [],
-		"q4" => json_decode($_POST['q4']) ?? [],
-		"q5" => $_POST['q5'] ?? "",
-	];
+// For q3 and q4, they come as JSON strings from C#
+$studentAnswers = [
+    "q1" => $_POST['q1'] ?? "",
+    "q2" => $_POST['q2'] ?? "",
+    "q3" => json_decode($_POST['q3'] ?? '[]', true) ?: [],  // Use true for associative array
+    "q4" => json_decode($_POST['q4'] ?? '[]', true) ?: [],
+    "q5" => $_POST['q5'] ?? "",
+];
 
 $correctCount = 0;
 $wrongCount = 0;
@@ -80,14 +116,13 @@ $time = date("H:i:s");
 try {
     $submitStudentExam = $pdo->query(SubmitExam($studentID, $date, $time, $score, $correctCount, $wrongCount));
 
-    $statement = $pdo->query(SELECT * FROM account WHERE StudentID = $studentID)
+    $statement = $pdo->query("SELECT * FROM account WHERE StudentID = $studentID");
     $thisStudent = $statement->fetch();
 
     echo json_encode([
-        "success" => true,
         "studentID" => $studentID,
         "firstName" => $thisStudent["FirstName"],
-        "lasttName" => $thisStudent["LastName"],
+        "lastName" => $thisStudent["LastName"],
         "email" => $thisStudent["Email"],
         "score" => $score,
         "correctCount" => $correctCount,
@@ -101,8 +136,7 @@ try {
         "studentAnsQ4" => $studentAnswers["q4"],
         "studentAnsQ5" => $studentAnswers["q5"]
     ]);
-} 
-
+}
 catch (Exception $e) 
 {
     echo json_encode([

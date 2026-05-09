@@ -1,59 +1,41 @@
 <?php
 
-require "requires.php";
+require "dbConnection.php";
+require "queries.php";
 
-$user = [ // Initialize user variables
-    'email' => '',
-    'password' => '',
-];
+$response = ["success" => "false", "message" => "", "studentID" => null];
 
-$errors = [ // initialize error messages
-    'email' => '',
-    'password' => ''
-];
-
-// Initialize message and invalid variables.
-$message = '';
-$error= '';
-$invalid = true;
-
-
-// Collecting form data
-$user['email'] = trim($_POST['Email'] ?? '');
-$user['password'] = $_POST['Password'] ?? '';
-
-// Returning the logged in account from the database.
-if ($user['email'] && $user['password']){
-    $statement = $pdo->query(ReturnStudent($user['email']));
-    $account = $statement->fetch();
-}
-
-// 1. Validate Email Format
-if (empty($user['email']) || !filter_var($user['email'], FILTER_VALIDATE_EMAIL)) {
-    $error = "Please enter a valid email address.";
-}
-
-// 2. Validate Password (only if user was found)
-if (!$account) {
-    $error = "Account not found.";
-} else {
-    // Use password_verify to check against the hash
-    if (!password_verify($user['password'], $account['Password'])) {
-        $error = "Incorrect Password";
+try {
+    if (empty($_POST)) {
+        throw new Exception("No POST data received");
     }
+
+    $email = trim($_POST['Email'] ?? '');
+    $password = $_POST['Password'] ?? '';
+
+    if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        throw new Exception("Please enter a valid email address.");
+    }
+
+    $statement = $pdo->query(ReturnStudent($email));
+    $account = $statement->fetch();
+
+    if (!$account) {
+        throw new Exception("Account not found.");
+    }
+
+    if (!password_verify($password, $account['Password'])) {
+        throw new Exception("Incorrect Password");
+    }
+
+    // Login successful
+    $response["success"] = "true";
+    $response["message"] = "Login Successful!";
+    $response["studentID"] = (string)$account['StudentID'];
+} catch (Exception $e) {
+    $response["success"] = "false";
+    $response["message"] = $e->getMessage();
+    $response["studentID"] = null;
 }
 
-if (!$error){
-    $invalid = false;
-}
-
-if (!$invalid) { // If everything is valid, set some session variables for later use
-    $_SESSION["email"] = $account['Email'];
-    $_SESSION["studentID"] = $account['StudentID'];
-    $_SESSION["logged_in"] = true;
-    $message = "Login Successful!";
-    echo json_encode([$message, (string)$account['StudentID']]);
-} else {
-    $message = "Login Error.";
-    echo json_encode([$error, $account['StudentID']]);
-}
+echo json_encode($response);

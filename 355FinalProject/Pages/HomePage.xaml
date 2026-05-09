@@ -1,7 +1,85 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="_355FinalProject.Pages.HomePage"
-             Title="HomePage">
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="_355FinalProject.Pages.HomePage"
+    Title="HomePage">
 
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior
+            IsVisible="False"
+            IsEnabled="False" />
+    </Shell.BackButtonBehavior>
+
+    <VerticalStackLayout
+        BackgroundColor="#D6EAF8"
+        Padding="20"
+        Spacing="15">
+
+        <!-- Exam Homepage -->
+        <Label
+            Text="Exam Homepage"
+            FontFamily="Trebuchet MS"
+            FontSize="28"
+            FontAttributes="Bold"
+            TextColor="#1f4e79"
+            HorizontalTextAlignment="Center"
+            BackgroundColor="#FEF9E7"
+            Padding="10" />
+
+        <!-- Welcome subtitle -->
+        <Label
+            Text="Welcome to the CITA 355 Online Exam"
+            FontFamily="Courier New"
+            FontSize="20"
+            TextColor="#333"
+            HorizontalOptions="Center" />
+
+        <!-- Description paragraph -->
+        <Label
+            Text="This exam contains 5 questions. Make sure to answer all questions completely before submitting."
+            FontFamily="Arial, Helvetica, sans-serif"
+            FontSize="14"
+            TextColor="Black"
+            HorizontalTextAlignment="Center"
+            HorizontalOptions="Center"
+            LineBreakMode="WordWrap" />
+
+        <!-- "You may now take the exam" message -->
+        <Label
+            x:Name="TakeExamMessageLabel"
+            Text="You may now take the exam."
+            FontFamily="Arial, Helvetica, sans-serif"
+            FontSize="14"
+            TextColor="Black"
+            HorizontalOptions="Center" />
+
+        <!-- START EXAM Button -->
+        <Button
+            x:Name="StartExamButton"
+            Text="START EXAM"
+            BackgroundColor="#99f3b4"
+            TextColor="#222"
+            WidthRequest="200"
+            HeightRequest="45"
+            CornerRadius="5"
+            FontSize="16"
+            FontAttributes="Bold"
+            HorizontalOptions="Center"
+            Clicked="StartExamClicked" />
+
+        <Button
+            x:Name="ViewPastExamsButton"
+            Text="View Past Exams"
+            BackgroundColor="LightBlue"
+            TextColor="#222"
+            WidthRequest="200"
+            HeightRequest="45"
+            CornerRadius="5"
+            FontSize="16"
+            FontAttributes="Bold"
+            HorizontalOptions="Center"
+            Clicked="ViewPastExamsClicked" />
+
+    </VerticalStackLayout>
 </ContentPage>

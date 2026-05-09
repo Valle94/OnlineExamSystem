@@ -5,6 +5,12 @@
              Title="ExamPage"
              BackgroundColor="#5499C7">
 
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior
+            IsVisible="False"
+            IsEnabled="False" />
+    </Shell.BackButtonBehavior>
+
     <ContentPage.Resources>
         <Style x:Key="QuestionTitleStyle" TargetType="Label">
             <Setter Property="FontSize" Value="26" />

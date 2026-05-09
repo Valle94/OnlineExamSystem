@@ -1,31 +1,118 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="_355FinalProject.Pages.LoginPage"
-             Title="LoginPage">
-    
-    <VerticalStackLayout>
-        <HorizontalStackLayout>
-            <Label
-                Text="Email: " />
-            <Entry
-                x:Name="EmailEntry" 
-                Placeholder="person@email.com"
-                Keyboard="Email"/>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="_355FinalProject.Pages.LoginPage"
+    Title="LoginPage"
+    BackgroundColor="#D6EAF8">
+
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior
+            IsVisible="False"
+            IsEnabled="False" />
+    </Shell.BackButtonBehavior>
+
+    <Grid
+        HorizontalOptions="Center"
+        BackgroundColor="#FCF3CF"
+        Padding="20"
+        RowSpacing="15"
+        ColumnSpacing="10">
+
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="Auto" />
+            <!-- Login heading -->
+            <RowDefinition
+                Height="Auto" />
+            <!-- Email row -->
+            <RowDefinition
+                Height="Auto" />
+            <!-- Password row -->
+            <RowDefinition
+                Height="Auto" />
+            <!-- Clear & Login buttons -->
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition
+                Width="Auto" />
+            <ColumnDefinition
+                Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Login Title -->
+        <Label
+            Grid.Row="0"
+            Grid.ColumnSpan="2"
+            Text="Login"
+            FontFamily="Courier New"
+            FontSize="24"
+            TextColor="#1f4e79"
+            HorizontalOptions="Center"
+            Margin="0,0,0,15" />
+
+        <!-- Email: Label + Entry -->
+        <Label
+            Grid.Row="1"
+            Grid.Column="0"
+            Text="Email:"
+            TextColor="Black"
+            VerticalOptions="Center"
+            FontAttributes="Bold" />
+
+        <Entry
+            Grid.Row="1"
+            Grid.Column="1"
+            x:Name="EmailEntry"
+            Placeholder="person@email.com"
+            Keyboard="Email"
+            TextColor="Black"
+            BackgroundColor="White" />
+
+        <!-- Password: Label + Entry -->
+        <Label
+            Grid.Row="2"
+            Grid.Column="0"
+            Text="Password:"
+            TextColor="Black"
+            VerticalOptions="Center"
+            FontAttributes="Bold" />
+
+        <Entry
+            Grid.Row="2"
+            Grid.Column="1"
+            x:Name="PasswordEntry"
+            Placeholder="••••••••"
+            Keyboard="Password"
+            TextColor="Black"
+            BackgroundColor="White" />
+
+        <!-- Buttons: Stack horizontally inside Grid cell -->
+        <HorizontalStackLayout
+            Grid.Row="3"
+            Grid.ColumnSpan="2"
+            Spacing="20"
+            HorizontalOptions="Center">
+
+            <Button
+                Text="Clear Form"
+                Clicked="ClearFormClicked"
+                BackgroundColor="#f0b7b7"
+                TextColor="#222"
+                WidthRequest="120"
+                HeightRequest="40"
+                CornerRadius="5" />
+
+            <Button
+                Text="Log In"
+                Clicked="LoginClicked"
+                BackgroundColor="#99f3b4"
+                TextColor="#222"
+                WidthRequest="120"
+                HeightRequest="40"
+                CornerRadius="5" />
         </HorizontalStackLayout>
-        <HorizontalStackLayout>
-            <Label
-                Text="Password: " />
-            <Entry
-                x:Name="PasswordEntry"
-                Placeholder="person@email.com"
-                Keyboard="Password"/>
-        </HorizontalStackLayout>
-        <Button
-            Text="Clear Form"
-            Clicked="ClearFormClicked" />
-        <Button
-            Text="Log In"
-            Clicked="LoginClicked" />
-    </VerticalStackLayout>
+
+    </Grid>
 </ContentPage>

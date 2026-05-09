@@ -5,6 +5,12 @@
              Title="ResultPage"
              BackgroundColor="#D6EAF8">
 
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior
+            IsVisible="False"
+            IsEnabled="False" />
+    </Shell.BackButtonBehavior>
+
     <ContentPage.Resources>
         <Style x:Key="SectionTitleStyle" TargetType="Label">
             <Setter Property="FontSize" Value="24" />

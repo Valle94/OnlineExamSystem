@@ -4,7 +4,7 @@ namespace _355FinalProject.Pages;
 
 public partial class ResultPage : ContentPage, IQueryAttributable
 {
-
+    string studentID;
 	public ResultPage()
 	{
 		InitializeComponent();
@@ -27,10 +27,17 @@ public partial class ResultPage : ContentPage, IQueryAttributable
         Q3Student.Text = $"Your Answer: {query["studentAnsQ3"]}";
         Q4Student.Text = $"Your Answer: {query["studentAnsQ4"]}";
         Q5Student.Text = $"Your Answer: {query["studentAnsQ5"]}";
+
+        studentID = query["studentID"].ToString();
     }
 
     private async void GoHome(object sender, EventArgs e)
     {
-       await Shell.Current.GoToAsync("///HomePage");
+        var parameters = new Dictionary<string, object>
+        {
+            { "StudentID", studentID }
+        };
+
+        await Shell.Current.GoToAsync("/HomePage", parameters);
     }
 }

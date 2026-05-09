@@ -7,7 +7,7 @@
     Title="_355FinalProject">
     <ShellContent
         Title="Login Page"
-        ContentTemplate="{DataTemplate pages:HomePage}"
+        ContentTemplate="{DataTemplate pages:LoginPage}"
         Route="LoginPage" />
 
 </Shell>

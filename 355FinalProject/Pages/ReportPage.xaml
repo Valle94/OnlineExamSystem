@@ -1,12 +1,146 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="_355FinalProject.Pages.ReportPage"
-             Title="ReportPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="_355FinalProject.Pages.ReportPage"
+    Title="ReportPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="0"
+            Padding="10">
+
+            <!-- Table Header -->
+            <Grid
+                BackgroundColor="#AED6F1"
+                ColumnDefinitions="*,*,*,*,*,*"
+                HeightRequest="45">
+
+                <Label
+                    Grid.Column="0"
+                    Text="StudentID"
+                    FontAttributes="Bold"
+                    TextColor="#111"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" />
+
+                <Label
+                    Grid.Column="1"
+                    Text="Date"
+                    FontAttributes="Bold"
+                    TextColor="#111"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" />
+
+                <Label
+                    Grid.Column="2"
+                    Text="Time"
+                    FontAttributes="Bold"
+                    TextColor="#111"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" />
+
+                <Label
+                    Grid.Column="3"
+                    Text="Score"
+                    FontAttributes="Bold"
+                    TextColor="#111"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" />
+
+                <Label
+                    Grid.Column="4"
+                    Text="Correct"
+                    FontAttributes="Bold"
+                    TextColor="#111"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" />
+
+                <Label
+                    Grid.Column="5"
+                    Text="Wrong"
+                    FontAttributes="Bold"
+                    TextColor="#111"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" />
+            </Grid>
+
+            <!-- Table Body with alternating row colors -->
+            <CollectionView
+                x:Name="ExamHistoryCollection">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border>
+                            <Border.Triggers>
+                                <DataTrigger
+                                    TargetType="Border"
+                                    Binding="{Binding RowIndex}"
+                                    Value="0">
+                                    <Setter
+                                        Property="BackgroundColor"
+                                        Value="#FCF3CF" />
+                                </DataTrigger>
+                                <DataTrigger
+                                    TargetType="Border"
+                                    Binding="{Binding RowIndex}"
+                                    Value="1">
+                                    <Setter
+                                        Property="BackgroundColor"
+                                        Value="#f0b7b7" />
+                                </DataTrigger>
+                            </Border.Triggers>
+
+                            <Grid
+                                ColumnDefinitions="*,*,*,*,*,*"
+                                HeightRequest="40">
+
+                                <Label
+                                    Grid.Column="0"
+                                    Text="{Binding StudentID}"
+                                    TextColor="Black"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center" />
+
+                                <Label
+                                    Grid.Column="1"
+                                    Text="{Binding Date}"
+                                    TextColor="Black"                                    
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center" />
+
+                                <Label
+                                    Grid.Column="2"
+                                    Text="{Binding Time}"
+                                    TextColor="Black"                                    
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center" />
+
+                                <Label
+                                    Grid.Column="3"
+                                    Text="{Binding Score, StringFormat='{0}%'}"
+                                    TextColor="Black"                                    
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center" />
+
+                                <Label
+                                    Grid.Column="4"
+                                    Text="{Binding CorrectAnswers}"
+                                    TextColor="Black"                                    
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center" />
+
+                                <Label
+                                    Grid.Column="5"
+                                    Text="{Binding WrongAnswers}"
+                                    TextColor="Black"                                    
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center" />
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+
 </ContentPage>
